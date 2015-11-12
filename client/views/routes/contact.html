@@ -1,0 +1,21 @@
+<div id="contact" class="col-md-8 col-md-offset-2 text-center">
+<h1>Contact</h1>
+
+<!--<h2>We'd love to hear from you</h2>-->
+<!--<textarea></textarea>-->
+<h2>Please join our mailing list</h2>
+<div ng-app="myApp" ng-controller="formCtrl">
+    <form novalidate>
+        First Name:<br>
+        <input type="text" ng-model="user.firstName"><br>
+        Last Name:<br>
+        <input type="text" ng-model="user.lastName"><br>
+        Email:<br>
+        <input type="text" ng-model="user.email"><br>
+        <br><br>
+        <button ng-click="reset()">Reset</button>
+    </form>
+    <!--<p>form = {{user}}</p>-->
+    <!--<p>master = {{master}}</p>-->
+</div>
+    </div>

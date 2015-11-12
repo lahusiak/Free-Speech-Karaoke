@@ -1,0 +1,8 @@
+body {
+    background-color: #710909;
+}
+
+#home, #about, #contact {
+    margin-top: 10px;
+    background-color: #cacbcc;
+}
