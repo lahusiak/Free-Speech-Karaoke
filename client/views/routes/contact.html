@@ -1,18 +1,23 @@
 <div id="contact" class="col-md-8 col-md-offset-2 text-center">
 <h1>Contact</h1>
 
-<!--<h2>We'd love to hear from you</h2>-->
-<!--<textarea></textarea>-->
 <h2>Please join our mailing list</h2>
-<div ng-app="myApp" ng-controller="formCtrl">
-    <form novalidate>
-        First Name:<br>
-        <input type="text" ng-model="user.firstName"><br>
-        Last Name:<br>
-        <input type="text" ng-model="user.lastName"><br>
-        Email:<br>
-        <input type="text" ng-model="user.email"><br>
+<div ng-app="myApp" ng-controller="contact">
+    <!--<form novalidate>-->
+
+    <div class = "form-group">
+        <label for="firstName">First Name: </label>
+        <input type="text" id="firstName" ng-model="user.firstName" placeholder="Enter First Name: "><br>
+        <label for="lastName">Last Name: </label>
+        <input type="text" id="lastName" ng-model="user.lastName"><br>
+        <label for="email">Email :</label>
+        <input type="text" id="email" ng-model="user.email"><br>
         <br><br>
+        <div class="form-group">
+            <textarea ng-model="user.message" id="newMessage" name="newMessage" cols="60" rows="5" placeholder="Enter your message..."></textarea>
+        </div>
+    </div>
+        <button ng-click="clickButton(user)" id="submit" class="btn btn-info">Submit</button>
         <button ng-click="reset()">Reset</button>
     </form>
     <!--<p>form = {{user}}</p>-->

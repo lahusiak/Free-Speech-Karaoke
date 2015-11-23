@@ -1,0 +1,25 @@
+    <div id="library" class="col-md-8 col-md-offset-2 ">
+        <h1>Select your Speech</h1>
+    <div class="container">
+    <div class="form-group">
+        <label for="searchBox">Search</label>
+        <input type="text" id="searchBox" ng-model="searchBox" placeholder="Ex. Abraham Lincoln, War, 1863">
+    </div>
+        <!--<select ng-model="speechSelected" ng-options="speech.theme for speech in speechArray"></select>-->
+        <!--<select ng-model="speechSelected" ng-options="speech.era for speech in speechArray"></select>-->
+    </div>
+
+    <div class="well" ng-repeat="speech in speechArray | filter:searchBox">
+        <h3>{{speech.title}}</h3>
+        <ul>
+            <li>{{speech.speaker}}</li>
+            <li>{{speech.year}}</li>
+            <li>{{speech.theme}}</li>
+            <li>{{speech.era}}</li>
+        </ul>
+
+    </div>
+
+    <div ui-grid="{data: speechArray}" class="myGrid  col-md-8 col-md-offset-2"></div>
+
+    </div>

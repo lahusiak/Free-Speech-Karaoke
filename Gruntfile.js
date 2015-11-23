@@ -26,6 +26,15 @@ module.exports = function(grunt){
                 ],
                 "dest": "server/public/vendors/"
             },
+            angularUI: {
+                expand: true,
+                cwd: 'node_modules',
+                src: [
+                    "angular-ui-grid/ui-grid.min.css",
+                    "angular-ui-grid/ui-grid.min.js"
+                ],
+                "dest": "server/public/vendors/"
+            },
             bootstrap: {
                 expand: true,
                 cwd: 'node_modules/bootstrap/dist/css',
@@ -46,7 +55,10 @@ module.exports = function(grunt){
                 src: [
                     "about.html",
                     "home.html",
-                    "contact.html"
+                    "contact.html",
+                    "library.html",
+                    "library.html",
+                    "backdrop.html"
                 ],
                 dest: "server/public/assets/views/routes/"
             },
@@ -61,6 +73,14 @@ module.exports = function(grunt){
                 cwd: "client",
                 src: 'styles/style.css',
                 dest: 'server/public/assets/'
+            },
+            images: {
+                expand: true,
+                cwd: "client/styles/images",
+                src:[ "giveSpeech.png",
+                    "pickBackdrop.png",
+                    "selectSpeech.png"],
+                dest: "server/public/assets/styles/images"
             }
         }
     });
