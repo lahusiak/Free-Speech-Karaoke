@@ -35,6 +35,15 @@ module.exports = function(grunt){
                 ],
                 "dest": "server/public/vendors/"
             },
+            angularAnimate: {
+                expand: true,
+                cwd: 'node_modules',
+                src: [
+                    "angular-animate/angular-animate.min.js",
+                    "angular-animate/angular-animate.min.js.map"
+                ],
+                "dest": "server/public/vendors/"
+            },
             bootstrap: {
                 expand: true,
                 cwd: 'node_modules/bootstrap/dist/css',
@@ -80,7 +89,7 @@ module.exports = function(grunt){
                 src:[ "giveSpeech.png",
                     "pickBackdrop.png",
                     "selectSpeech.png",
-                "Banner.png"],
+                "Banner.png", "backdrop1.jpeg", "backdrop2.jpeg","backdrop3.jpeg","backdrop4.png","backdrop5.jpeg"],
                 dest: "server/public/assets/styles/images"
             }
         }
