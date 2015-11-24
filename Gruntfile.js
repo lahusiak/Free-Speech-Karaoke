@@ -89,7 +89,17 @@ module.exports = function(grunt){
                 src:[ "giveSpeech.png",
                     "pickBackdrop.png",
                     "selectSpeech.png",
-                "Banner.png", "backdrop1.jpeg", "backdrop2.jpeg","backdrop3.jpeg","backdrop4.png","backdrop5.jpeg"],
+                    "Banner.png",
+                    "img1.png",
+                    "backdrop4.png",
+                    "backdrop1.jpeg",
+                    "img4.png",
+                    "img5.png",
+                    "left-arrow.png",
+                    "right-arrow.png",
+                    "unclesam.png"
+                    ],
+
                 dest: "server/public/assets/styles/images"
             }
         }

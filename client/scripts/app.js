@@ -22,7 +22,8 @@ myApp.config(['$routeProvider', function($routeProvider){
         }).
         when('/backdrop', {
             templateUrl: "assets/views/routes/backdrop.html",
-            controller: "SliderController"
+            controller: "SliderController",
+            directive:"slider"
         }).
         when('/speech', {
             templateUrl: "assets/views/routes/library.html"

@@ -1,5 +1,5 @@
 body {
-    background-color: #710909;
+    background-color: #ffc508;
 }
 
 #home, #about, #contact {
@@ -20,19 +20,28 @@ body {
     margin: 10px;
 }
 
-#equalBox {
-    height: 40px;
-    width: 40px;
+#icons #plus, #equals{
     color: black;
+    font-size: 50px;
 }
 
-#equalSign {
-    height: 15px;
-    width: 40px;
-    color: white;
-    border-radius:5px;
-}
+/*#equalBox {*/
+    /*height: 40px;*/
+    /*width: 40px;*/
+    /*color: black;*/
+/*}*/
 
+/*#equalSign {*/
+    /*height: 15px;*/
+    /*width: 40px;*/
+    /*color: white;*/
+    /*border-radius:5px;*/
+/*}*/
+
+.myGrid {
+    width: auto;
+    height: auto;
+}
 .slide.ng-hide-add,
 .slide.ng-hide-remove {
     -webkit-transition: all linear 0.5s;
@@ -50,9 +59,9 @@ body {
     opacity: 1;
 }
 
-* {
-    font-family: 'Open Sans', sans-serif;
-}
+/** {*/
+    /*font-family: 'Open Sans', sans-serif;*/
+/*}*/
 .center-grey {
     background: #f2f2f2;
 }

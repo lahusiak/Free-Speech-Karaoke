@@ -1,15 +1,15 @@
-
+<div class="container">
 <div class="slider">
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
-        <img ng-src="img/{{image.src}}" />
+        <img ng-src="{{image.src}}" />
     </div>
     <div class="arrows">
-        <a href="#" ng-click="prev()">
-            <img src="img/left-arrow.png" />
-        </a>
-        <a href="#" ng-click="next()">
-            <img src="img/right-arrow.png" />
-        </a>
+        <!--<a href="#" ng-click="prev()">-->
+        <img src="assets/styles/images/left-arrow.png" ng-click="prev()"/>
+        <!--</a>-->
+        <!--<a href="#" ng-click="next()">-->
+        <img src="assets/styles/images/right-arrow.png" ng-click="next()" />
+        <!--</a>-->
     </div>
 </div>
-
+</div>
