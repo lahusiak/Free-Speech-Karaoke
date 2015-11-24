@@ -79,7 +79,8 @@ module.exports = function(grunt){
                 cwd: "client/styles/images",
                 src:[ "giveSpeech.png",
                     "pickBackdrop.png",
-                    "selectSpeech.png"],
+                    "selectSpeech.png",
+                "Banner.png"],
                 dest: "server/public/assets/styles/images"
             }
         }

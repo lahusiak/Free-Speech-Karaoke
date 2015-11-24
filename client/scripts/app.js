@@ -7,7 +7,7 @@ myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider.
         when('/home', {
             templateUrl: "assets/views/routes/home.html",
-            controller: "selectSpeech"
+            controller: "library"
         }).
         when('/about', {
             templateUrl: "assets/views/routes/about.html",

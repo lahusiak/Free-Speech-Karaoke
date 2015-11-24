@@ -4,7 +4,7 @@ body {
 
 #home, #about, #contact {
     margin-top: 10px;
-    background-color: #cacbcc;
+    /*background-color: #cacbcc;*/
 }
 
 /*.myGrid {*/
@@ -12,13 +12,23 @@ body {
     /*height: 250px;*/
 /*}*/
 
-ul {
-    list-style-type: none;
-}
 
 #icons img {
     padding: 5px;
     border: solid 3px #fafafa;
     border-radius: 7px;
     margin: 10px;
+}
+
+#equalBox {
+    height: 40px;
+    width: 40px;
+    color: black;
+}
+
+#equalSign {
+    height: 15px;
+    width: 40px;
+    color: white;
+    border-radius:5px;
 }
