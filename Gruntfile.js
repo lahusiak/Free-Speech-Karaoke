@@ -67,7 +67,8 @@ module.exports = function(grunt){
                     "contact.html",
                     "library.html",
                     "library.html",
-                    "backdrop.html"
+                    "backdrop.html",
+                    "deliver.html"
                 ],
                 dest: "server/public/assets/views/routes/"
             },

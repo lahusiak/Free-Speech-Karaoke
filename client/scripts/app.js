@@ -25,12 +25,32 @@ myApp.config(['$routeProvider', function($routeProvider){
             controller: "SliderController",
             directive:"slider"
         }).
-        when('/speech', {
-            templateUrl: "assets/views/routes/library.html"
-            //controller:
+        when('/deliver', {
+            templateUrl: "assets/views/routes/deliver.html",
+            controller: "deliver"
         }).
         otherwise({
             redirectTo:'home'
         })
+}]);
+
+myApp.service('deliver', ['$scope', function(){
+
+    var deliverArray = [];
+
+    var addObject = function(object){
+        deliverArray = object;
+        console.log("deliveryArray");
+        return deliverArray;
+    };
+
+    var deliverApi = {
+
+
+
+    }
+
+
+
 }]);
 
