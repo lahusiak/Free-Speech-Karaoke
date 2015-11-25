@@ -97,7 +97,7 @@ module.exports = function(grunt){
                     "img5.png",
                     "left-arrow.png",
                     "right-arrow.png",
-                    "unclesam.png"
+                    "uncleKaraoke.png"
                     ],
 
                 dest: "server/public/assets/styles/images"
