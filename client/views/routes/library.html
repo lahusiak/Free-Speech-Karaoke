@@ -9,17 +9,26 @@
         <!--<select ng-model="speechSelected" ng-options="speech.era for speech in speechArray"></select>-->
     </div>
 
-    <div class="well" ng-repeat="speech in speechArray | filter:searchBox">
-        <h3>{{speech.title}}</h3>
-        <ul>
-            <li>{{speech.speaker}}</li>
-            <li>{{speech.year}}</li>
-            <li>{{speech.theme}}</li>
-            <li>{{speech.era}}</li>
-        </ul>
+    <div class="well" id="speechLibrary" ng-repeat="speech in speechArray | filter:searchBox">
 
+        <!--<div ng-click="ShowHide()">-->
+            <div ng-click="IsVisible=!IsVisible">
+            <h3>{{speech.speaker}}</h3>
+            </div>
+        <a href="#backdrop" ng-click="selectSpeech(speech)" id="rightArrow">
+            <img src="assets/styles/images/right-arrow.png"/>
+            <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
+        </a>
+        <div ng-show = "IsVisible">
+        <ul>
+            <li>Title: {{speech.title}}, {{speech.year}}</li>
+            <li>Topic: {{speech.theme}}</li>
+            <li>Era: {{speech.era}}</li>
+            <li>{{speech.text}}</li>
+        </ul>
+        </div>
     </div>
 
-    <div ui-grid="{data: speechArray}" class="myGrid"></div>
+    <!--<div ui-grid="{data: speechArray}" class="myGrid"></div>-->
 
     </div>
