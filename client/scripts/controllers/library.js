@@ -1,7 +1,8 @@
-myApp.controller('library', ['$scope', '$http', function($scope, $http) {
+myApp.controller('library', ['$scope', '$http', 'deliver', function($scope, $http, deliver) {
     $scope.deliverySpeech = {};
     $scope.speechArray = [];
     $scope.IsVisible;
+    $scope.deliver = deliver;
 
     $scope.getSpeeches = function(){
         console.log($scope.speechArray);
@@ -13,10 +14,10 @@ myApp.controller('library', ['$scope', '$http', function($scope, $http) {
             });
     };
 
-    $scope.selectSpeech = function(speech){
-        $scope.deliverySpeech = speech;
-        console.log($scope.deliverySpeech);
-    };
+    //$scope.selectSpeech = function(){
+    //    $scope.deliverySpeech = deliver.;
+    //    console.log($scope.deliverySpeech);
+    //};
 
     $scope.getSpeeches();
 }]);

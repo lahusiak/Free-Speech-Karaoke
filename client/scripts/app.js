@@ -25,32 +25,37 @@ myApp.config(['$routeProvider', function($routeProvider){
             controller: "SliderController",
             directive:"slider"
         }).
-        when('/deliver', {
-            templateUrl: "assets/views/routes/deliver.html",
-            controller: "deliver"
-        }).
+        //when('/deliver', {
+        //    templateUrl: "assets/views/routes/deliver.html",
+        //    controller: "deliver"
+        //}).
         otherwise({
             redirectTo:'home'
         })
 }]);
 
-myApp.service('deliver', ['$scope', function(){
+myApp.service('deliver', function(){
 
+    var delivery = {};
     var deliverArray = [];
 
     var addObject = function(object){
+        //var newdeliverArray = deliverArray.push(object);
         deliverArray = object;
-        console.log("deliveryArray");
+        console.log("deliveryArray", deliverArray);
         return deliverArray;
     };
 
     var deliverApi = {
+        makeSpeech: function(){
+        addObject();
+    },
 
+        displaySpeech: function(){
+           return deliverArray;
+        }
 
-
-    }
-
-
-
-}]);
+    };
+    return deliverApi;
+});
 
