@@ -1,4 +1,5 @@
 myApp.controller('SliderController', ['$scope', function($scope){
+    $scope.deliveryBackdrop={};
     $scope.images= [{
         src:'/assets/styles/images/img1.png',
         title:'Backdrop1'
@@ -15,6 +16,11 @@ myApp.controller('SliderController', ['$scope', function($scope){
         src: '/assets/styles/images/img5.png',
         title: 'Backdrop5'
     }];
+
+    //$scope.selectBackdrop = function(image){
+    //    $scope.deliveryBackdrop = image;
+    //    console.log($scope.deliveryBackdrop);
+    //};
 }]);
 
 myApp.directive('slider', ['$timeout', function($timeout){
@@ -52,6 +58,11 @@ myApp.directive('slider', ['$timeout', function($timeout){
                     scope.next();
                     timer=$timeout(sliderFunc,5000);
                 },5000);
+            };
+
+            scope.selectBackdrop = function(image){
+                scope.deliveryBackdrop = image;
+                console.log(scope.deliveryBackdrop);
             };
 
             sliderFunc();
