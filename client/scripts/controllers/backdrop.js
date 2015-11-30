@@ -1,5 +1,6 @@
-myApp.controller('SliderController', ['$scope', function($scope){
+myApp.controller('SliderController', ['$scope', 'DeliveryFactory', function($scope, DeliveryFactory){
     $scope.deliveryBackdrop={};
+    $scope.DeliveryFactory = DeliveryFactory;
     $scope.images= [{
         src:'/assets/styles/images/img1.png',
         title:'Backdrop1'
@@ -23,7 +24,7 @@ myApp.controller('SliderController', ['$scope', function($scope){
     //};
 }]);
 
-myApp.directive('slider', ['$timeout', function($timeout){
+myApp.directive('slider', ['$timeout', 'DeliveryFactory', function($timeout, DeliveryFactory){
     return {
         restrict: 'AE',
         replace: true,
@@ -60,10 +61,13 @@ myApp.directive('slider', ['$timeout', function($timeout){
                 },5000);
             };
 
-            scope.selectBackdrop = function(image){
-                scope.deliveryBackdrop = image;
-                console.log(scope.deliveryBackdrop);
-            };
+            scope.DeliveryFactory = DeliveryFactory;
+            //scope.selectBackdrop = function(image){
+            //    scope.deliveryBackdrop = image;
+            //    console.log(scope.deliveryBackdrop);
+
+
+            //};
 
             sliderFunc();
 

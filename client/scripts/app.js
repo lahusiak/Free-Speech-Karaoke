@@ -34,28 +34,54 @@ myApp.config(['$routeProvider', function($routeProvider){
         })
 }]);
 
-myApp.service('deliver', function(){
+myApp.factory('DeliveryFactory', [function(){
 
-    var delivery = {};
-    var deliverArray = [];
+    //var deliveryObject = {};
 
-    var addObject = function(object){
-        //var newdeliverArray = deliverArray.push(object);
-        deliverArray = object;
-        console.log("deliveryArray", deliverArray);
-        return deliverArray;
+    var factory = {};
+
+    factory.deliveryArray = [];
+
+    factory.deliveryObject = {};
+
+    factory.addSpeech = function(object){
+        //factory.deliveryArray.push({text: object});
+        factory.deliveryObject["selectedSpeech"]=object;
+        //console.log("deliveryArray", factory.deliveryArray);
+        console.log("deliveryArray", factory.deliveryObject);
+        //return factory.deliveryArray;
+        //return factory.deliveryObject;
     };
 
-    var deliverApi = {
-        makeSpeech: function(){
-        addObject();
-    },
-
-        displaySpeech: function(){
-           return deliverArray;
-        }
-
+    factory.addImage = function(object){
+        //factory.deliveryArray.push({image: object});
+        factory.deliveryObject["selectedImage"]=object;
+        //console.log("deliveryArray", factory.deliveryArray);
+        console.log("deliveryArray", factory.deliveryObject);
+        //return factory.deliveryArray;
+        //return factory.deliveryObject;
     };
-    return deliverApi;
-});
+
+    //var deliveryApi = {
+    //    makeSpeech: function(){
+    //    addSpeech();
+    //},
+    //
+    //    displaySpeech: function(){
+    //       return deliveryArray;
+    //    }
+    //
+    //};
+    return factory;
+}]);
+
+//myApp.factory("Performance", function(){
+//    return function(text, image){
+//        return {
+//            text: text,
+//            image: image
+//        }
+//
+//    }
+//});
 

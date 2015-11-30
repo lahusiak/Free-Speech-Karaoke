@@ -2,7 +2,7 @@
 <div class="slider">
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
         <img ng-src="{{image.src}}" />
-        <a href="#home" ng-click="selectBackdrop(image)" id="rightArrow">
+        <a href="#home" ng-click="DeliveryFactory.addImage(image.src)" id="rightArrow">
         <img src="assets/styles/images/right-arrow.png"/>
         <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
         </a>

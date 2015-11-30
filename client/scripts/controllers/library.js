@@ -1,8 +1,8 @@
-myApp.controller('library', ['$scope', '$http', 'deliver', function($scope, $http, deliver) {
+myApp.controller('library', ['$scope', '$http', 'DeliveryFactory', function($scope, $http, DeliveryFactory) {
     $scope.deliverySpeech = {};
     $scope.speechArray = [];
     $scope.IsVisible;
-    $scope.deliver = deliver;
+    $scope.DeliveryFactory = DeliveryFactory;
 
     $scope.getSpeeches = function(){
         console.log($scope.speechArray);
@@ -14,8 +14,9 @@ myApp.controller('library', ['$scope', '$http', 'deliver', function($scope, $htt
             });
     };
 
+    $scope.selectSpeech = DeliveryFactory.addSpeech();
     //$scope.selectSpeech = function(){
-    //    $scope.deliverySpeech = deliver.;
+    //
     //    console.log($scope.deliverySpeech);
     //};
 
