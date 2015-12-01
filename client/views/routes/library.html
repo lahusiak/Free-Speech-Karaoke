@@ -1,20 +1,55 @@
-    <div id="library" class="col-md-8 col-md-offset-2 ">
+    <div class="page-header">
         <h1>Select your Speech</h1>
-    <div class="container">
-    <div class="form-group">
-        <label for="searchBox">Search</label>
-        <input type="text" id="searchBox" ng-model="searchBox" placeholder="Ex. Abraham Lincoln, War, 1863">
     </div>
+    <!--<div class="container">-->
+    <!--<div class="form-group">-->
+    <div class="col-xs-12 col-sm-8-offset-2">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" ng-model="searchBox" placeholder="Ex. Abraham Lincoln, War, 1863...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+        </div>
+        </div>
+    <br>
+    <br>
+
+
+
+        <!--<label for="searchBox">Search</label>-->
+        <!--<input type="text" id="searchBox" ng-model="searchBox" placeholder="Ex. Abraham Lincoln, War, 1863">-->
+    <!--</div>-->
         <!--<select ng-model="speechSelected" ng-options="speech.theme for speech in speechArray"></select>-->
         <!--<select ng-model="speechSelected" ng-options="speech.era for speech in speechArray"></select>-->
-    </div>
+    <!--</div>-->
 
-    <div class="well" id="speechLibrary" ng-repeat="speech in speechArray | filter:searchBox">
-
+    <!--<div class="well" id="speechLibrary" ng-repeat="speech in speechArray | filter:searchBox">-->
+        <!--<div class="panel panel-primary" ng-repeat="speech in speechArray | filter:searchBox">-->
+            <!--&lt;!&ndash; Default panel contents &ndash;&gt;-->
+            <!--<div class="panel-heading" ng-click="IsVisible=!IsVisible">{{speech.speaker}}</div>-->
+            <!--<div class="panel-body" ng-show = "IsVisible">-->
+                    <div class="list-group" >
+                        <div class= "col-sm-3 col-lg-offset-2 text-center" ng-repeat="speech in speechArray | filter:searchBox">
+                            <h4 class = "libraryDisplay text-center">
+                            <img ng-src="assets/styles/images/uncleKaraokeIcon.png" class="list-group-item"/>
+                            </h4>
+                                <li class = "list-group-item">Speaker: {{speech.speaker}} </li>
+                            <li class="list-group-item">Title: {{speech.title}}, {{speech.year}}</li>
+                        <li class="list-group-item">Topic: {{speech.theme}}</li>
+                        <li class="list-group-item">Era: {{speech.era}}</li>
+                        <!--<li class="list-group-item">{{speech.text}}</li>-->
+                    </div>
+                </div>
+            </div>
         <!--<div ng-click="ShowHide()">-->
             <div ng-click="IsVisible=!IsVisible">
             <h3>{{speech.speaker}}</h3>
             </div>
+        <div class="col-xs-12 col-sm-4">
+            <button class="btn btn-lg btn-success text-center">
+                Select
+            </button>
+        </div>
         <!--<a href="#backdrop" ng-click="selectSpeech(speech)" id="rightArrow">-->
             <a href="#backdrop" ng-click="DeliveryFactory.addSpeech(speech.text)" id="rightArrow">
             <img ng-src="assets/styles/images/right-arrow.png"/>

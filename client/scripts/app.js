@@ -25,10 +25,10 @@ myApp.config(['$routeProvider', function($routeProvider){
             controller: "SliderController",
             directive:"slider"
         }).
-        //when('/deliver', {
-        //    templateUrl: "assets/views/routes/deliver.html",
-        //    controller: "deliver"
-        //}).
+        when('/deliver', {
+            templateUrl: "assets/views/routes/deliver.html",
+            controller: "deliverSpeech"
+        }).
         otherwise({
             redirectTo:'home'
         })
@@ -45,22 +45,33 @@ myApp.factory('DeliveryFactory', [function(){
     factory.deliveryObject = {};
 
     factory.addSpeech = function(object){
-        //factory.deliveryArray.push({text: object});
-        factory.deliveryObject["selectedSpeech"]=object;
+
+        factory.deliveryObject["selectedSpeech"]= object;
+
+        factory.deliveryArray.push(factory.deliveryObject);
+
         //console.log("deliveryArray", factory.deliveryArray);
-        console.log("deliveryArray", factory.deliveryObject);
-        //return factory.deliveryArray;
+
+        console.log("deliveryArray", factory.deliveryArray);
+
+        return factory.deliveryArray;
+
         //return factory.deliveryObject;
     };
 
-    factory.addImage = function(object){
-        //factory.deliveryArray.push({image: object});
-        factory.deliveryObject["selectedImage"]=object;
-        //console.log("deliveryArray", factory.deliveryArray);
-        console.log("deliveryArray", factory.deliveryObject);
-        //return factory.deliveryArray;
-        //return factory.deliveryObject;
-    };
+    //factory.addImage = function(image){
+    //    //factory.deliveryArray.push({image: object});
+    //
+    //    factory.deliveryObject["selectedImage"]=image;
+    //
+    //    factory.deliveryArray.push(factory.deliveryObject);
+    //    //console.log("deliveryArray", factory.deliveryArray);
+    //
+    //    console.log("deliveryArray", factory.deliveryArray);
+    //
+    //    return factory.deliveryArray;
+    //    //return factory.deliveryObject;
+    //};
 
     //var deliveryApi = {
     //    makeSpeech: function(){

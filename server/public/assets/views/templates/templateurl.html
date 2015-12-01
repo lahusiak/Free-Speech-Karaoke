@@ -1,18 +1,18 @@
 <div class="container">
 <div class="slider">
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
-        <img ng-src="{{image.src}}" />
-        <a href="#home" ng-click="DeliveryFactory.addImage(image.src)" id="rightArrow">
-        <img src="assets/styles/images/right-arrow.png"/>
+        <img class="featured" ng-src="{{image.src}}" />
+        <a href="#deliver" ng-click="DeliveryFactory.addImage(image.src)" id="rightArrow">
+        <img ng-src="assets/styles/images/right-arrow.png"/>
         <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
         </a>
     </div>
     <div class="arrows">
         <!--<a href="#" ng-click="prev()">-->
-        <img src="assets/styles/images/left-arrow.png" ng-click="prev()"/>
+        <img ng-src="assets/styles/images/left-arrow.png" ng-click="prev()"/>
         <!--</a>-->
         <!--<a href="#" ng-click="next()">-->
-        <img src="assets/styles/images/right-arrow.png" ng-click="next()" />
+        <img ng-src="assets/styles/images/right-arrow.png" ng-click="next()" />
         <!--</a>-->
     </div>
 </div>

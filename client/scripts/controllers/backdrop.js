@@ -2,20 +2,20 @@ myApp.controller('SliderController', ['$scope', 'DeliveryFactory', function($sco
     $scope.deliveryBackdrop={};
     $scope.DeliveryFactory = DeliveryFactory;
     $scope.images= [{
-        src:'/assets/styles/images/img1.png',
-        title:'Backdrop1'
+        src:'/assets/styles/images/hayBackdrop.png',
+        title:'Hay Backdrop'
     }, {
-        src: '/assets/styles/images/img4.png',
-        title: 'Backdrop2'
+        src: '/assets/styles/images/ovalOfficeBackdrop.png',
+        title: 'Oval Office'
     }, {
-        src: '/assets/styles/images/backdrop4.png',
-        title: 'Backdrop3'
+        src: '/assets/styles/images/cowBackdrop.png',
+        title: 'Cow Backdrop'
     },{
-        src: '/assets/styles/images/img4.png',
-        title: 'Backdrop4'
+        src: '/assets/styles/images/stateFairBackdrop.png',
+        title: 'State Fair'
     },{
-        src: '/assets/styles/images/img5.png',
-        title: 'Backdrop5'
+        src: '/assets/styles/images/cowboyBackdrop.png',
+        title: 'Cowboy Backdrop'
     }];
 
     //$scope.selectBackdrop = function(image){

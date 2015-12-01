@@ -78,6 +78,11 @@ body {
     left: 0;
     box-shadow: 0px 0px 15px #999;
 }
+
+.featured {
+    width: 600px;
+    height: 400px;
+}
 .arrows {
     position: absolute;
     width: auto;
@@ -106,4 +111,14 @@ h1 {
     position: relative;
 }
 
-#searchBox
+#karaoke img {
+    position: relative;
+    width: 100%; /* for IE 6 */
+}
+
+h2 {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+}
