@@ -14,7 +14,9 @@ myApp.controller('library', ['$scope', '$http', 'DeliveryFactory', function($sco
             });
     };
 
-    $scope.selectSpeech = DeliveryFactory.addSpeech();
+
+    //$scope.deliveryObject = DeliveryFactory.addSpeech();
+    //$scope.selectSpeech = $scope.DeliveryFactory.addSpeech();
     //$scope.selectSpeech = function(){
     //
     //    console.log($scope.deliverySpeech);

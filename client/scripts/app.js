@@ -38,11 +38,46 @@ myApp.factory('DeliveryFactory', [function(){
 
     //var deliveryObject = {};
 
-    var factory = {};
+    //var factory = {};
 
-    factory.deliveryArray = [];
+    var deliveryArray = [];
 
-    factory.deliveryObject = {};
+    var deliveryObject = {
+        speechText:"",
+        image:""
+    };
+
+    //factory.deliveryArray = [];
+    //
+    //factory.deliveryObject = {
+    //
+    //};
+
+
+    return {
+        addSpeech: function(speech){
+            deliveryObject.speechText = speech;
+            console.log("deliveryObject with speech", deliveryObject);
+            return deliveryObject;
+        },
+        addImage: function(image){
+            deliveryObject.image = image;
+            console.log("deliveryObject with image", deliveryObject);
+            return deliveryObject;
+        },
+
+        getSpeech: function(){
+            return deliveryObject.speechText;
+        },
+
+        getImage: function(){
+            return deliveryObject.image;
+        },
+
+        getObject: function(){
+            return deliveryObject;
+        }
+    };
 
     factory.addSpeech = function(object){
 
@@ -59,19 +94,19 @@ myApp.factory('DeliveryFactory', [function(){
         //return factory.deliveryObject;
     };
 
-    //factory.addImage = function(image){
-    //    //factory.deliveryArray.push({image: object});
-    //
-    //    factory.deliveryObject["selectedImage"]=image;
-    //
-    //    factory.deliveryArray.push(factory.deliveryObject);
-    //    //console.log("deliveryArray", factory.deliveryArray);
-    //
-    //    console.log("deliveryArray", factory.deliveryArray);
-    //
-    //    return factory.deliveryArray;
-    //    //return factory.deliveryObject;
-    //};
+    factory.addImage = function(image){
+        //factory.deliveryArray.push({image: object});
+
+        factory.deliveryObject["selectedImage"]=image;
+
+        factory.deliveryArray.push(factory.deliveryObject);
+        //console.log("deliveryArray", factory.deliveryArray);
+
+        console.log("deliveryArray", factory.deliveryArray);
+
+        return factory.deliveryArray;
+        //return factory.deliveryObject;
+    };
 
     //var deliveryApi = {
     //    makeSpeech: function(){

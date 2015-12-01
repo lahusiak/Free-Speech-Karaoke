@@ -2,10 +2,12 @@
 <div class="slider">
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
         <img class="featured" ng-src="{{image.src}}" />
-        <a href="#deliver" ng-click="DeliveryFactory.addImage(image.src)" id="rightArrow">
+        <div ng-click="imageFunc(image.src)">
+        <a href=""  id="rightArrow">
         <img ng-src="assets/styles/images/right-arrow.png"/>
         <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
         </a>
+        </div>
     </div>
     <div class="arrows">
         <!--<a href="#" ng-click="prev()">-->

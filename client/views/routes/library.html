@@ -34,36 +34,49 @@
                             <img ng-src="assets/styles/images/uncleKaraokeIcon.png" class="list-group-item"/>
                             </h4>
                                 <li class = "list-group-item">Speaker: {{speech.speaker}} </li>
-                            <li class="list-group-item">Title: {{speech.title}}, {{speech.year}}</li>
-                        <li class="list-group-item">Topic: {{speech.theme}}</li>
-                        <li class="list-group-item">Era: {{speech.era}}</li>
+                                <li class="list-group-item">Title: {{speech.title}}, {{speech.year}}</li>
+                                <li class="list-group-item">Topic: {{speech.theme}}</li>
+                                <li class="list-group-item">Era: {{speech.era}}</li>
+                                <li class="list-group-item">
+                                    <!--<div class="col-xs-12 col-sm-4">-->
+                                        <a href="#backdrop">
+                                            <!--<button class="btn btn-lg btn-success text-center" ng-click="selectSpeech(speech.text)">-->
+                                                <button class="btn btn-lg btn-success text-center" ng-click="DeliveryFactory.addSpeech(speech.text)">
+                                                Select
+                                            </button>
+                                        </a>
+                                    <!--</div>-->
+                                </li>
+
                         <!--<li class="list-group-item">{{speech.text}}</li>-->
                     </div>
                 </div>
             </div>
         <!--<div ng-click="ShowHide()">-->
-            <div ng-click="IsVisible=!IsVisible">
-            <h3>{{speech.speaker}}</h3>
-            </div>
-        <div class="col-xs-12 col-sm-4">
-            <button class="btn btn-lg btn-success text-center">
-                Select
-            </button>
-        </div>
+            <!--<div ng-click="IsVisible=!IsVisible">-->
+            <!--<h3>{{speech.speaker}}</h3>-->
+            <!--</div>-->
+        <!--<div class="col-xs-12 col-sm-4">-->
+            <!--<a href="#backdrop">-->
+            <!--<button class="btn btn-lg btn-success text-center" ng-click="DeliveryFactory.addSpeech(speech.text)">-->
+                <!--Select-->
+            <!--</button>-->
+            <!--</a>-->
+        <!--</div>-->
         <!--<a href="#backdrop" ng-click="selectSpeech(speech)" id="rightArrow">-->
-            <a href="#backdrop" ng-click="DeliveryFactory.addSpeech(speech.text)" id="rightArrow">
-            <img ng-src="assets/styles/images/right-arrow.png"/>
-            <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
-        </a>
-        <div ng-show = "IsVisible">
-        <ul>
-            <li>Title: {{speech.title}}, {{speech.year}}</li>
-            <li>Topic: {{speech.theme}}</li>
-            <li>Era: {{speech.era}}</li>
-            <li>{{speech.text}}</li>
-        </ul>
-        </div>
-    </div>
+            <!--<a href="#backdrop" ng-click="DeliveryFactory.addSpeech(speech.text)" id="rightArrow">-->
+            <!--<img ng-src="assets/styles/images/right-arrow.png"/>-->
+            <!--&lt;!&ndash;<input type="button" id="speechButton" value="Select" class="btn btn-info">&ndash;&gt;-->
+        <!--</a>-->
+        <!--<div ng-show = "IsVisible">-->
+        <!--<ul>-->
+            <!--<li>Title: {{speech.title}}, {{speech.year}}</li>-->
+            <!--<li>Topic: {{speech.theme}}</li>-->
+            <!--<li>Era: {{speech.era}}</li>-->
+            <!--<li>{{speech.text}}</li>-->
+        <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
 
     <!--<div ui-grid="{data: speechArray}" class="myGrid"></div>-->
 
