@@ -18,18 +18,18 @@ myApp.controller('SliderController', ['$scope', 'DeliveryFactory', function($sco
         title: 'Cowboy Backdrop'
     }];
 
-    $scope.imageValue = DeliveryFactory.addImage();
+    //$scope.imageValue = DeliveryFactory.addImage();
 
     console.log("YES");
     $scope.test = function(){
         console.log("Yupper do");
     };
 
-    $scope.imageFunc = function(newValue){
-        console.log("I'm imageFunc");
-        $scope.imageValue.image = newValue;
-        DeliveryFactory.addImage(newValue);
-    };
+    //$scope.imageFunc = function(newValue){
+    //    console.log("I'm imageFunc");
+    //    $scope.imageValue.image = newValue;
+    //    DeliveryFactory.addImage(newValue);
+    //};
     //$scope.selectBackdrop = function(image){
     //    $scope.deliveryBackdrop = image;
     //    console.log($scope.deliveryBackdrop);
@@ -85,6 +85,14 @@ myApp.directive('slider', ['$timeout', 'DeliveryFactory', function($timeout, Del
             //};
 
             sliderFunc();
+
+            scope.imageValue = DeliveryFactory.addImage();
+
+            scope.imageFunc = function(newValue){
+                console.log("I'm imageFunc");
+                scope.imageValue.image = newValue;
+                DeliveryFactory.addImage(newValue);
+            };
 
             scope.$on('$destroy',function(){
                 $timeout.cancel(timer);

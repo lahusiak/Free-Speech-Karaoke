@@ -1,7 +1,10 @@
 <!--<div class = "well" id="karaoke" ng-repeat= "karaoke in karaokeArray">-->
-    <div class = "well" id="karaoke" ng-repeat= "karaoke in deliveryArray">
-    <!--<img ng-src="{{karaoke.selectedImage}}">-->
-    <h2>{{karaoke.selectedSpeech}}</h2>
+    <div class = "well" id="karaoke">
+        <!--<button class="btn btn-lg text-center" ng-click="karaokeObject()">KARAOKE</button>-->
+        <div> <img ng-src="{{karaokeObject.image}}"/>
+        </div>
+        <h2 class="col-sm-8 col-sm-offset-2">{{karaokeObject.speechText}}</h2>
+
 
 </div>
 
