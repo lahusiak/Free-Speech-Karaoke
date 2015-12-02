@@ -7,12 +7,6 @@ body {
     /*background-color: #cacbcc;*/
 }
 
-/*.myGrid {*/
-    /*width: 500px;*/
-    /*height: 250px;*/
-/*}*/
-
-
 #icons img {
     padding: 5px;
     border: solid 3px #fafafa;
@@ -20,28 +14,26 @@ body {
     margin: 10px;
 }
 
-#icons #plus, #equals{
+#icons #plus #equals{
     color: black;
     font-size: 50px;
 }
 
-/*#equalBox {*/
-    /*height: 40px;*/
-    /*width: 40px;*/
-    /*color: black;*/
-/*}*/
-
-/*#equalSign {*/
-    /*height: 15px;*/
-    /*width: 40px;*/
-    /*color: white;*/
-    /*border-radius:5px;*/
-/*}*/
-
-.myGrid {
-    width: auto;
-    height: auto;
+.lead {
+    text-align: center;
+    padding: 10px;
+    font-size: 80px;
+    color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: title 5s steps(60, end);
 }
+
+@keyframes title {
+    from {width: 0px;}
+}
+/****************Slideshow************/
 .slide.ng-hide-add,
 .slide.ng-hide-remove {
     -webkit-transition: all linear 0.5s;
@@ -59,9 +51,6 @@ body {
     opacity: 1;
 }
 
-/** {*/
-    /*font-family: 'Open Sans', sans-serif;*/
-/*}*/
 .center-grey {
     background: #f2f2f2;
 }
@@ -92,22 +81,6 @@ body {
 .arrows img {
     height: 32px;
     cursor: pointer;
-}
-
-
-h1 {
-    text-align: center;
-    padding: 10px;
-    font-size: 80px;
-    color: #222;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 30em;
-    animation: title 10s steps(60, end);
-}
-
-@keyframes title {
-    from {width: 0px;}
 }
 
 #speechLibrary h3:hover{
