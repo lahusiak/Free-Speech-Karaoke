@@ -100,7 +100,7 @@ myApp.directive('slider', ['$timeout', 'DeliveryFactory', function($timeout, Del
 
             /* End : For Automatic slideshow*/
         },
-        templateUrl: '/assets/views/templates/templateurl.html'
+        templateUrl: '/assets/views/templates/slideshow.html'
 
     };
 }]);

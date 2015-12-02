@@ -1,14 +1,17 @@
+
 <!--<div class = "well" id="karaoke" ng-repeat= "karaoke in karaokeArray">-->
     <div class = "well" id="karaoke">
-        <!--<button class="btn btn-lg text-center" ng-click="karaokeObject()">KARAOKE</button>-->
-        <div> <img ng-src="{{karaokeObject.image}}"/>
-        </div>
-        <h2 class="col-sm-8 col-sm-offset-2">{{karaokeObject.speechText}}</h2>
+        <h3>Are you ready?</h3>
+        <button class="btn btn-lg text-center" ng-click="IsVisible=!IsVisible">KARAOKE</button>
 
+        <div ng-show="IsVisible"> <img ng-src="{{karaokeObject.image}}"/>
+
+        <h2>{{karaokeObject.speechText}}</h2>
+        </div>
 
 </div>
 
-<h3>Are you ready?</h3>
+
 
 <!--ng-repeat="speech in speechArray"-->
 <!--<h2>{{speech.text}}</h2>-->

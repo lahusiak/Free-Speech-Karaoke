@@ -4,7 +4,6 @@ var express = require('express');
 var app = express();
 
 var index = require('./routes/index.js');
-var sendData = require('./routes/sendData');
 var speeches = require('./routes/speeches');
 
 var cloudinary = require('cloudinary');
@@ -15,9 +14,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({expanded: true}));
 
-// mount router middleward
+// mount router middleware
 app.use('/speeches', speeches);
-//app.use('/data', sendData);
 app.use('/', index);
 
 // set node to listen on a port

@@ -98,8 +98,16 @@ body {
 h1 {
     text-align: center;
     padding: 10px;
-    font-size: 40px;
+    font-size: 80px;
     color: #222;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 30em;
+    animation: title 10s steps(60, end);
+}
+
+@keyframes title {
+    from {width: 0px;}
 }
 
 #speechLibrary h3:hover{
@@ -111,16 +119,73 @@ h1 {
     position: relative;
 }
 
-#karaoke h2 {
-    color: white;
-    position: absolute;
-    top: 200px;
-    left: 0;
-    /*width: 80%;*/
-}
+
+/*------KARAOKE PAGE---------*/
+/*#karaoke h2 {*/
+    /*color: white;*/
+    /*position: absolute;*/
+    /*top: 200px;*/
+    /*left: 0;*/
+    /*/!*width: 80%;*!/*/
+/*}*/
+
+/*#karaoke img {*/
+    /*position: relative;*/
+    /*width: 100%; /!* for IE 6 *!/*/
+/*}*/
 
 #karaoke img {
     position: relative;
     width: 100%; /* for IE 6 */
 }
 
+#karaoke h2{
+    color: lime;
+    font-family: "Courier";
+    font-size: 20px;
+    position: absolute;
+    top: 200px;
+    left: 0;
+    margin: 10px 0 0 10px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    width: 80%;
+    animation-name: karaoke;
+    animation-duration: 60s;
+    animation: type 15s steps(60, end) ;
+}
+
+
+@keyframes karaoke {
+    0% {
+        /*width: 0px*/
+    }
+    50% {
+        color: red
+    }
+    100% {
+        color: purple
+    }
+}
+
+
+/*}*/
+/*#karaoke h2:nth-child(2){*/
+    /*animation: type2 8s steps(60, end);*/
+/*}*/
+@keyframes type{
+             from { width: 0;}
+         }
+
+/*@keyframes type2{*/
+             /*0%{width: 0;}*/
+             /*50%{width: 0;}*/
+             /*100%{ width: 100; color: red;}*/
+         /*}*/
+
+@keyframes blink{
+             to{opacity: .0;}
+         }
+::selection{
+    background: black;
+}
