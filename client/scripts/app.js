@@ -45,10 +45,10 @@ myApp.config(['$routeProvider', function($routeProvider){
             templateUrl: "assets/views/routes/deliver.html",
             controller: "deliverSpeech"
         }).
-        when('/login', {
-            templateUrl: "assets/views/routes/login.html",
-            controller: "login"
-        }).
+        //when('/login', {
+        //    templateUrl: "assets/views/routes/login.html",
+        //    controller: "login"
+        //}).
         otherwise({
             redirectTo:'home'
         })
