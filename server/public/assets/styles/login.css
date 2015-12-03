@@ -10,7 +10,8 @@ body {
     height: 450px;
     background-color: black;
     vertical-align: middle;
-    border: solid 3px #fafafa;
-    border-radius: 7px;
-    padding: 20px;
+    border-radius: 22px;
+    padding: 10px;
+    box-shadow: 0 0 32px rgb(255, 24, 200);
+    border: 3px solid rgb(255, 24, 200);
 }

@@ -2,25 +2,36 @@ body {
     background-color: #ffc508;
 }
 
-#home, #about, #contact {
+#about, #contact {
     margin-top: 10px;
     /*background-color: #cacbcc;*/
 }
 
+#home img{
+    padding: 10px;
+    margin: auto;
+    position: relative;
+}
 #icons img {
+    display: inline;
     padding: 5px;
     border: solid 3px #fafafa;
     border-radius: 7px;
     margin: 10px;
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
 }
 
 #icons img:hover{
     -webkit-filter: invert(100%);
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
 }
 
-#icons #plus #equals{
-    color: black;
+#icons span{
+    color: rgb(255, 53, 86);
     font-size: 50px;
+    -webkit-text-stroke: 5px black;
 }
 
 .lead {
@@ -28,15 +39,57 @@ body {
     padding: 10px;
     font-size: 80px;
     color: #222;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 30em;
-    animation: title 5s steps(60, end);
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
+    /*width: 30em;*/
+    /*animation: title 5s steps(60, end);*/
 }
 
-@keyframes title {
-    from {width: 0px;}
+/*@keyframes title {*/
+    /*from {width: 0px;}*/
+/*}*/
+
+/******************LIBRARY***************/
+
+.library-head{
+    font-style: italic;
 }
+
+.input-group {
+    padding: 1px;
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
+    border-radius: 7px;
+    margin: 5px;
+}
+.heading:hover {
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
+}
+
+.heading h3:hover {
+    color: rgb(255, 53, 86);
+    cursor: pointer;
+}
+
+.heading h3 {
+    float: left;
+}
+
+.heading button {
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
+    background-color: black;
+    color: white;
+    border: 1px solid;
+    float: right;
+    padding-top: 5px;
+}
+
+.panel-body {
+    clear: both;
+}
+
 /****************Slideshow************/
 .slide.ng-hide-add,
 .slide.ng-hide-remove {
