@@ -8,6 +8,7 @@ var session = require('express-session');
 
 var index = require('./routes/index.js');
 var speeches = require('./routes/speeches');
+var mailinglist = require('./routes/mailinglist');
 
 //var cloudinary = require('cloudinary');
 
@@ -20,6 +21,7 @@ app.use(bodyParser.urlencoded({expanded: true}));
 // mount router middleware
 app.use('/speeches', speeches);
 
+app.use('/mailinglist', mailinglist);
 
 
 app.use(session({

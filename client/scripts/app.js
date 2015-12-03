@@ -3,6 +3,7 @@
  */
 var myApp = angular.module("myApp", ['ngRoute', 'ui.grid', 'ngAnimate']);
 
+//FACEBOOK PLUGINS
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '796300190497596',
@@ -18,6 +19,8 @@ window.fbAsyncInit = function() {
     js.src = "//connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+//APP CONFIGURATION
 
 myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider.
@@ -54,25 +57,14 @@ myApp.config(['$routeProvider', function($routeProvider){
         })
 }]);
 
+//FACTORIES
+
 myApp.factory('DeliveryFactory', [function(){
-
-    //var deliveryObject = {};
-
-    //var factory = {};
-
-    var deliveryArray = [];
 
     var deliveryObject = {
         speechText:"",
         image:""
     };
-
-    //factory.deliveryArray = [];
-    //
-    //factory.deliveryObject = {
-    //
-    //};
-
 
     return {
         addSpeech: function(speech){
@@ -99,55 +91,6 @@ myApp.factory('DeliveryFactory', [function(){
         }
     };
 
-    //factory.addSpeech = function(object){
-    //
-    //    factory.deliveryObject["selectedSpeech"]= object;
-    //
-    //    factory.deliveryArray.push(factory.deliveryObject);
-    //
-    //    //console.log("deliveryArray", factory.deliveryArray);
-    //
-    //    console.log("deliveryArray", factory.deliveryArray);
-    //
-    //    return factory.deliveryArray;
-    //
-    //    //return factory.deliveryObject;
-    //};
-
-    //factory.addImage = function(image){
-    //    //factory.deliveryArray.push({image: object});
-    //
-    //    factory.deliveryObject["selectedImage"]=image;
-    //
-    //    factory.deliveryArray.push(factory.deliveryObject);
-    //    //console.log("deliveryArray", factory.deliveryArray);
-    //
-    //    console.log("deliveryArray", factory.deliveryArray);
-    //
-    //    return factory.deliveryArray;
-    //    //return factory.deliveryObject;
-    //};
-
-    //var deliveryApi = {
-    //    makeSpeech: function(){
-    //    addSpeech();
-    //},
-    //
-    //    displaySpeech: function(){
-    //       return deliveryArray;
-    //    }
-    //
-    //};
-    //return factory;
 }]);
 
-//myApp.factory("Performance", function(){
-//    return function(text, image){
-//        return {
-//            text: text,
-//            image: image
-//        }
-//
-//    }
-//});
 

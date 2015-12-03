@@ -1,20 +1,26 @@
 myApp.controller('contact', ['$scope', '$http', function($scope, $http) {
-    //$scope.mailingList = [];
-    //$scope.master = {firstName: "John", lastName: "Doe", email: "person@email.com", comment: "Comment"};
-    $scope.user = {};
-    //$scope.reset = function() {
-    //    //$scope.user = angular.copy($scope.master);
-    //};
-       //POST
-        $scope.clickButton = function(kittyFooFoo){
-           console.log("I'm clicked!", kittyFooFoo);
 
-            //$http.post('/data', ).then(function(response){
-            //
-            //    $scope.getPeople();
-            //
-            //   console.log('This is mailingList', $scope.mailingList);
-           //});
+    $scope.mailinglists = [];
+    $scope.mailinglist = {};
+
+    //var fan = {fan_id: 1};
+    $scope.reset = function() {
+        $scope.user = angular.copy($scope.mailinglist);
+    };
+       //POST
+        $scope.clickButton = function(mailinglistData){
+
+            //mailinglistData.fan_id = fan.fan_id;
+
+            console.log("I'm clicked!", mailinglistData);
+
+            $http.post('/mailinglist/mailinglist', mailinglistData).then(function(response){
+
+                $scope.reset();
+                //$scope.getPeople();
+
+               console.log('This is mailinglists', $scope.mailinglists);
+           });
     };
     //GET
     //$scope.getPeople = function(){

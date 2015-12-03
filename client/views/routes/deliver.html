@@ -1,4 +1,4 @@
-
+<div id="fb-root"></div>
 <!--<div class = "well" id="karaoke" ng-repeat= "karaoke in karaokeArray">-->
     <div class = "well" id="karaoke">
         <h3>Are you ready?</h3>
@@ -7,6 +7,12 @@
         <div ng-show="IsVisible"> <img ng-src="{{karaokeObject.image}}"/>
 
         <h2>{{karaokeObject.speechText}}</h2>
+
+            <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
+
+            <a href="#library" class="btn btn-lg">Start Over</a>
+            <a href="#contact" class="btn btn-lg">Mailing List</a>
+            <a href="/logout" class="btn btn-primary"><span class=""></span>Logout</a>
         </div>
 
 </div>

@@ -3,24 +3,21 @@
 
 <h2>Please join our mailing list</h2>
 <div ng-app="myApp" ng-controller="contact">
-    <!--<form novalidate>-->
 
     <div class = "form-group">
         <label for="firstName">First Name: </label>
-        <input type="text" id="firstName" ng-model="user.firstName" placeholder="Enter First Name: "><br>
+        <input type="text" id="firstName" ng-model="user.firstname" placeholder="Enter First Name: "><br>
         <label for="lastName">Last Name: </label>
-        <input type="text" id="lastName" ng-model="user.lastName"><br>
+        <input type="text" id="lastName" ng-model="user.lastname"><br>
         <label for="email">Email :</label>
         <input type="text" id="email" ng-model="user.email"><br>
         <br><br>
         <div class="form-group">
-            <textarea ng-model="user.message" id="newMessage" name="newMessage" cols="60" rows="5" placeholder="Enter your message..."></textarea>
+            <textarea ng-model="user.message" id="newMessage" name="newmessage" cols="60" rows="5" placeholder="Enter your message..."></textarea>
         </div>
     </div>
         <button ng-click="clickButton(user)" id="submit" class="btn btn-info">Submit</button>
-        <button ng-click="reset()">Reset</button>
     </form>
-    <!--<p>form = {{user}}</p>-->
-    <!--<p>master = {{master}}</p>-->
+
 </div>
     </div>
