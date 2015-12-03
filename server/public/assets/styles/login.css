@@ -1,0 +1,16 @@
+body {
+    background-color: #ffc508;
+}
+
+.signface {
+    color: white;
+    margin: auto;
+    margin-top: 50px;
+    width: 400px;
+    height: 450px;
+    background-color: black;
+    vertical-align: middle;
+    border: solid 3px #fafafa;
+    border-radius: 7px;
+    padding: 20px;
+}
