@@ -50,9 +50,16 @@ body {
 /*}*/
 
 /******************LIBRARY***************/
+.arrows {
+    display: inline;
+    position: relative;
 
-.library-head{
+}
+.library-head h2{
     font-style: italic;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 .input-group {
@@ -60,11 +67,8 @@ body {
     box-shadow: 0 0 32px rgb(255, 53, 86);
     border: 3px solid rgb(255, 53, 86);
     border-radius: 7px;
-    margin: 5px;
-}
-.heading:hover {
-    box-shadow: 0 0 32px rgb(255, 53, 86);
-    border: 3px solid rgb(255, 53, 86);
+    margin: 10px;
+    margin-bottom: 20px;
 }
 
 .heading h3:hover {
@@ -83,14 +87,30 @@ body {
     color: white;
     border: 1px solid;
     float: right;
-    padding-top: 5px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .panel-body {
     clear: both;
+    border:3px solid rgb(255, 53, 86);
+    font-size: 20px;
 }
 
 /****************Slideshow************/
+/*#slideshow {*/
+    /*display: inline;*/
+/*}*/
+#backdrop {
+    height: 1000px;
+    width:100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+
+}
+
 .slide.ng-hide-add,
 .slide.ng-hide-remove {
     -webkit-transition: all linear 0.5s;
@@ -112,6 +132,8 @@ body {
     background: #f2f2f2;
 }
 .slider {
+    width: 80%;
+    height: 80%;
     position: relative;
     padding: 5px;
     width: 610px;
@@ -119,35 +141,68 @@ body {
     margin-top: 40px;
 }
 .slide {
+    margin: auto;
+    height: 550px;
+    width: 650px;
     position: absolute;
-    top: 0;
-    left: 0;
-    box-shadow: 0px 0px 15px #999;
+    /*top: 0;*/
+    /*left: 0;*/
+    /*box-shadow: 0 0 32px rgb(255, 53, 86);*/
+    border-radius: 7px;
+    border: 3px solid rgb(255, 53, 86);
+    background-color: rgb(255, 53, 86);
+    box-shadow: 5px 5px 05px rgb(255, 53, 86);
 }
+
+/*.slide img {*/
+    /*height: 500px;*/
+    /*width: 600px;*/
+    /*webkit-filter:contrast(3);*/
+/*}*/
 
 .featured {
     width: 600px;
-    height: 400px;
+    height: 500px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
 }
-.arrows {
-    position: absolute;
-    width: auto;
-    top: 10px;
-    right: 20px;
-}
-.arrows img {
-    height: 32px;
+/*.arrows {*/
+    /*position: absolute;*/
+    /*/!*width: auto;*!/*/
+    /*/!*top: 10px;*!/*/
+    /*/!*right: 20px;*!/*/
+/*}*/
+
+#prev {
+    width: 50px;
+    height: 50px;
     cursor: pointer;
+    float: left;
 }
+
+#next {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    float: right;
+}
+
+/*.arrows img {*/
+    /*display: inline-block;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*cursor: pointer;*/
+/*}*/
 
 #speechLibrary h3:hover{
     color: #00d6b2;
     cursor: pointer;
 }
 
-#rightArrow {
-    position: relative;
-}
+/*#rightArrow {*/
+    /*position: relative;*/
+/*}*/
 
 
 /*------KARAOKE PAGE---------*/
@@ -164,15 +219,34 @@ body {
     /*width: 100%; /!* for IE 6 *!/*/
 /*}*/
 
+#deliver{
+    background-color: black;
+    color:white;
+    height: 800px;
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
+}
+
+/* The starting CSS styles for the enter animation */
+/*.fade.ng-enter {*/
+    /*transition:2s linear all;*/
+    /*opacity:0;*/
+/*}*/
+
+/* The finishing CSS styles for the enter animation */
+/*.fade.ng-enter.ng-enter-active {*/
+    /*opacity:1;*/
+/*}*/
+
 #karaoke img {
     position: relative;
+    height: 800px;
     width: 100%; /* for IE 6 */
 }
 
 #karaoke h2{
-    color: lime;
-    font-family: "Courier";
-    font-size: 20px;
+    color: white;
+    font-size: 24px;
     position: absolute;
     top: 200px;
     left: 0;
@@ -180,23 +254,23 @@ body {
     white-space: pre-wrap;
     overflow: hidden;
     width: 80%;
-    animation-name: karaoke;
-    animation-duration: 60s;
-    animation: type 15s steps(60, end) ;
+    /*animation-name: karaoke;*/
+    /*animation-duration: 60s;*/
+    /*animation: type 15s steps(60, end) ;*/
 }
 
 
-@keyframes karaoke {
-    0% {
-        /*width: 0px*/
-    }
-    50% {
-        color: red
-    }
-    100% {
-        color: purple
-    }
-}
+/*@keyframes karaoke {*/
+    /*0% {*/
+        /*/!*width: 0px*!/*/
+    /*}*/
+    /*50% {*/
+        /*color: red*/
+    /*}*/
+    /*100% {*/
+        /*color: purple*/
+    /*}*/
+/*}*/
 
 
 /*}*/

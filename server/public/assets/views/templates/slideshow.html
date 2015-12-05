@@ -1,21 +1,33 @@
-<div class="container">
-<div class="slider">
+
+<div class="container" id="slideshow">
+    <h1>Pick a Backdrop</h1>
+        <div class="slider">
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
-        <img class="featured" ng-src="{{image.src}}" />
-        <div ng-click="imageFunc(image.src)">
-        <a href="#deliver"  id="rightArrow">
-        <img ng-src="assets/styles/images/right-arrow.png"/>
+        <img class="featured img-responsive text center" ng-src="{{image.src}}" />
+        <button class="btn btn-lg" ng-click="imageFunc(image.src)">
+        <a href="#deliver">
+            Select
         <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
         </a>
-        </div>
+        </button>
+        <img id= "prev" class="img-responsive" ng-src="assets/styles/images/left-arrow.png" ng-click="prev()"/>
+        <img id="next" class="img-responsive" ng-src="assets/styles/images/right-arrow.png" ng-click="next()" />
     </div>
-    <div class="arrows">
-        <!--<a href="#" ng-click="prev()">-->
-        <img ng-src="assets/styles/images/left-arrow.png" ng-click="prev()"/>
-        <!--</a>-->
-        <!--<a href="#" ng-click="next()">-->
-        <img ng-src="assets/styles/images/right-arrow.png" ng-click="next()" />
-        <!--</a>-->
+            <!--<div class="arrows">-->
+                <!--<img id= "prev" class="img-responsive" ng-src="assets/styles/images/left-arrow.png" ng-click="prev()"/>-->
+                <!--<img id="next" class="img-responsive" ng-src="assets/styles/images/right-arrow.png" ng-click="next()" />-->
+            <!--</div>-->
+
+</div>
+
+    <!--<div class="right-arrow">-->
+        <!--&lt;!&ndash;<a href="#" ng-click="prev()">&ndash;&gt;-->
+
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;<a href="#" ng-click="next()">&ndash;&gt;-->
+        <!--<img ng-src="assets/styles/images/right-arrow.png" ng-click="next()" />-->
+        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+    <!--</div>-->
+
+
     </div>
-</div>
-</div>

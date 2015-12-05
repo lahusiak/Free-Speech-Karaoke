@@ -2,20 +2,20 @@ myApp.controller('SliderController', ['$scope', 'DeliveryFactory', function($sco
     $scope.deliveryBackdrop={};
     //$scope.DeliveryFactory = DeliveryFactory;
     $scope.images= [{
-        src:'/assets/styles/images/hayBackdrop.png',
-        title:'Hay Backdrop'
+        src:'/assets/styles/images/nature-field-countryside-house.png',
+        title:'Nature Backdrop'
     }, {
-        src: '/assets/styles/images/ovalOfficeBackdrop.png',
-        title: 'Oval Office'
+        src: '/assets/styles/images/usa-stock-ny-new-york.png',
+        title: 'Flag Backdrop'
     }, {
-        src: '/assets/styles/images/cowBackdrop.png',
-        title: 'Cow Backdrop'
+        src: '/assets/styles/images/sky-field-agriculture-harvest.png',
+        title: 'Field Backdrop'
     },{
-        src: '/assets/styles/images/stateFairBackdrop.png',
-        title: 'State Fair'
+        src: '/assets/styles/images/usa-station-metro-subway.png',
+        title: 'Subway Fair'
     },{
-        src: '/assets/styles/images/cowboyBackdrop.png',
-        title: 'Cowboy Backdrop'
+        src: '/assets/styles/images/Life-of-Pix-free-stock-photos-sunset-sea-light-mikewilson.png',
+        title: 'Sunset Backdrop'
     }];
 
     //$scope.imageValue = DeliveryFactory.addImage();
