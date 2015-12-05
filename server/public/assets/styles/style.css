@@ -225,7 +225,76 @@ body {
     height: 800px;
     box-shadow: 0 0 32px rgb(255, 53, 86);
     border: 3px solid rgb(255, 53, 86);
+    /*margin-top: 80px;*/
 }
+
+/*#karaoke h3 {*/
+    /*margin-top: 80px;*/
+/*}*/
+
+#deliver h1 {
+    text-shadow: 2px 2px 8px #FF0000;
+    margin: 50px;
+}
+
+
+#deliver h2 {
+    position: absolute;
+    top: 20px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    height: 60%;
+    overflow: scroll;
+    line-height: 3;
+    text-shadow: 2px 2px 8px #FF0000;
+}
+
+#deliver img {
+    margin-top: 20px;
+    position: relative;
+    height: 550px;
+    width: 100%; /* for IE 6 */
+}
+
+.give-speech {
+    height: 280px;
+    width: 280px;
+    background-image: url("/assets/styles/images/giveSpeech.png");
+    padding: 5px;
+    border: solid 3px #fafafa;
+    border-radius: 7px;
+    margin: 10px;
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
+}
+
+/*.give-speech img {*/
+    /*height: 250px;*/
+    /*width: 250px;*/
+/*}*/
+
+.give-speech:hover{
+    -webkit-filter: invert(100%);
+    box-shadow: 0 0 32px rgb(255, 53, 86);
+    border: 3px solid rgb(255, 53, 86);
+}
+
+.nav-buttons {
+    position: relative;
+    margin-top: 15px;
+}
+
+.nav-buttons .fb-like {
+    position: relative;
+    margin-top: 15px;
+    width: 80%;
+    height: 5%;
+}
+
+
 
 /* The starting CSS styles for the enter animation */
 /*.fade.ng-enter {*/
@@ -237,15 +306,6 @@ body {
 /*.fade.ng-enter.ng-enter-active {*/
     /*opacity:1;*/
 /*}*/
-#karaoke h3 {
-    margin-top: 80px;
-}
-
-#karaoke img {
-    position: relative;
-    height: 800px;
-    width: 100%; /* for IE 6 */
-}
 
 /*#karaoke h2{*/
     /*color: white;*/
@@ -298,50 +358,50 @@ body {
 /*}*/
 /*/////////////////SCROLLING TEXT ANIMATIONS*/
 
-.scroll-up {
-    height: 700px;
-    overflow: hidden;
-    color: white;
-}
-.scroll-up h2 {
-    margin: auto;
-    position: absolute;
-    width: 80%;
-    height: 50%;
-    margin: 0;
-    line-height: 50px;
-    text-align: center;
-    text-size: 20px;
-     /*Starting position*/
-    -moz-transform:translateY(100%);
-    -webkit-transform:translateY(100%);
-    transform:translateY(50%);
-    /* Apply animation to this element */
-    -moz-animation: scroll-up 12s  ;
-    -webkit-animation: scroll-up 12s  ;
-    animation: scroll-up 12s  ;
-}
-/* Move it (define the animation) */
-@-moz-keyframes scroll-up {
-    0%   { -moz-transform: translateY(100%); }
-    100% { -moz-transform: translateY(-100%); }
-}
-@-webkit-keyframes scroll-up {
-    0%   { -webkit-transform: translateY(100%); }
-    100% { -webkit-transform: translateY(-100%); }
-}
-@keyframes scroll-up {
-    0%   {
-        -moz-transform: translateY(100%); /* Browser bug fix */
-        -webkit-transform: translateY(100%); /* Browser bug fix */
-        transform: translateY(100%);
-    }
-    100% {
-        -moz-transform: translateY(-100%); /* Browser bug fix */
-        -webkit-transform: translateY(-100%); /* Browser bug fix */
-        transform: translateY(-100%);
-    }
-}
+/*.scroll-up {*/
+    /*height: 700px;*/
+    /*overflow: hidden;*/
+    /*color: white;*/
+/*}*/
+/*.scroll-up h2 {*/
+    /*margin: auto;*/
+    /*position: absolute;*/
+    /*width: 80%;*/
+    /*height: 50%;*/
+    /*margin: 0;*/
+    /*line-height: 50px;*/
+    /*text-align: center;*/
+    /*text-size: 20px;*/
+     /*/!*Starting position*!/*/
+    /*-moz-transform:translateY(100%);*/
+    /*-webkit-transform:translateY(100%);*/
+    /*transform:translateY(100%);*/
+    /*/!* Apply animation to this element *!/*/
+    /*-moz-animation: scroll-up 12s  ;*/
+    /*-webkit-animation: scroll-up 12s  ;*/
+    /*animation: scroll-up 12s  ;*/
+/*}*/
+/*/!* Move it (define the animation) *!/*/
+/*@-moz-keyframes scroll-up {*/
+    /*0%   { -moz-transform: translateY(50%); }*/
+    /*100% { -moz-transform: translateY(-100%); }*/
+/*}*/
+/*@-webkit-keyframes scroll-up {*/
+    /*0%   { -webkit-transform: translateY(100%); }*/
+    /*100% { -webkit-transform: translateY(-100%); }*/
+/*}*/
+/*@keyframes scroll-up {*/
+    /*0%   {*/
+        /*-moz-transform: translateY(100%); /!* Browser bug fix *!/*/
+        /*-webkit-transform: translateY(100%); /!* Browser bug fix *!/*/
+        /*transform: translateY(100%);*/
+    /*}*/
+    /*100% {*/
+        /*-moz-transform: translateY(-100%); /!* Browser bug fix *!/*/
+        /*-webkit-transform: translateY(-100%); /!* Browser bug fix *!/*/
+        /*transform: translateY(-100%);*/
+    /*}*/
+/*}*/
 
 
 
