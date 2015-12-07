@@ -1,32 +1,3 @@
- <!--<div class="library-head col-sm-8 col-sm-offset-2">-->
-     <!--<h3>Get started by picking a speech from our presidential library.</h3>-->
-        <!--<div class="input-group input-group-lg">-->
-            <!--<input type="text" class="form-control" ng-model="searchBox" placeholder="Ex. Abraham Lincoln, War, 1863...">-->
-                <!--<span class="input-group-btn">-->
-                    <!--<button class="btn btn-default" type="button" ng-click="IsVisible=!IsVisible">Go!</button>-->
-                <!--</span>-->
-        <!--</div>-->
-        <!--</div>-->
-    <!--<br>-->
-    <!--<br>-->
-    <!--<div class= "panel panel-default col-md-8 col-md-offset-2" ng-repeat="speech in speechArray | filter:searchBox">-->
-        <!--<div class = "heading" ng-show="IsVisible" ng-mouseover="Show=!Show" ng-mouseout="Show=!Show">-->
-            <!--<h3>{{speech.speaker}}</h3>-->
-            <!--<a href="#backdrop">-->
-                <!--<button class="btn btn-lg btn-default" ng-click="DeliveryFactory.addSpeech(speech.text)">-->
-                    <!--Select-->
-                <!--</button>-->
-            <!--</a>-->
-        <!--</div>-->
-        <!--<div class="panel-body" ng-show="Show">-->
-            <!--<ul>-->
-                <!--<li class="list-group-item">Title: {{speech.title}}, {{speech.year}}</li>-->
-                <!--<li class="list-group-item">Topic: {{speech.theme}}, Era: {{speech.era}}</li>-->
-                <!--<li class="list-group-item">{{speech.text}}</li>-->
-            <!--</ul>-->
-        <!--</div>-->
-    <!--</div>-->
-
  <div ng-include="'/assets/views/templates/header.html'"></div>
  <div ng-include="'/assets/views/templates/nav.html'"></div>
  <div class="library-head col-sm-8 col-sm-offset-2 text-center">
@@ -40,24 +11,27 @@
  </div>
  <br>
  <br>
- <div class= "panel panel-default col-md-8 col-md-offset-2" ng-repeat="speech in speechArray | filter:searchBox">
+ <div class="library container-fluid col-sm-8 col-sm-offset-2">
+ <div class= "panel panel-default col-md-10 col-md-offset-1" ng-repeat="speech in speechArray | filter:searchBox">
      <!--<div class = "heading" ng-click="IsVisible=!IsVisible" ng-mouseover="IsVisible=!IsVisible" ng-mouseout= "IsVisible=!IsVisible">-->
      <div class = "heading" >
-         <h3 ng-click="IsVisible=!IsVisible">{{speech.speaker}}</h3>
+         <h3 ng-click="IsVisible=!IsVisible">{{speech.title}}</h3>
+
          <a href="#backdrop">
-             <button class="btn btn-lg btn-default" ng-click="DeliveryFactory.addSpeech(speech.text)">
-                 Select
-             </button>
+         <div class="add-speech" ng-click="DeliveryFactory.addSpeech(speech.text)">
+             </div>
          </a>
+
      </div>
      <div class="panel-body" ng-show="IsVisible" ng-mouseover="IsVisible">
          <ul>
-             <li class="list-group-item">Title: {{speech.title}}, {{speech.year}}</li>
-             <li class="list-group-item">Topic: {{speech.theme}}, Era: {{speech.era}}</li>
-             <li class="list-group-item">{{speech.text}}</li>
+             <li class="list-group-item">Speaker: {{speech.speaker}}, {{speech.year}}</li>
+             <li class="list-group-item">Era: {{speech.era}}</li>
+             <li class="text list-group-item">Topic: {{speech.theme}}</li>
          </ul>
      </div>
  </div>
+     </div>
         <!--<div ng-click="ShowHide()">-->
             <!--<div ng-click="IsVisible=!IsVisible">-->
             <!--<h3>{{speech.speaker}}</h3>-->

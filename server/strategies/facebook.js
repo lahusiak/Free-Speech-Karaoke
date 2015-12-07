@@ -27,7 +27,7 @@ passport.use(new FacebookStrategy({
 
         // pull in our app id and secret from our auth.js file
         clientID        : '796300190497596',
-        clientSecret    : 'f0723fdf3c1c2094d11090022fd919be',
+        clientSecret    : '87405701b44dbea9a221ae961015ae7a',
         callbackURL     : 'http://localhost:5000/auth/facebook/callback'
 
     },

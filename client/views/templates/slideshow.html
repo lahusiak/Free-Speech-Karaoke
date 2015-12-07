@@ -1,17 +1,17 @@
-
 <div class="container" id="slideshow">
-    <h1>Pick a Backdrop</h1>
-        <div class="slider">
+    <h1>Next, it's time to pick out your backdrop.</h1>
+        <div class="slider" ng-cloak>
     <div class="slide" ng-repeat="image in images" ng-show="image.visible">
         <img class="featured img-responsive text center" ng-src="{{image.src}}" />
-        <button class="btn btn-lg" ng-click="imageFunc(image.src)">
+        <div id= "prev" ng-click="prev()"><</div>
+        <div id="next" ng-click="next()">></div>
         <a href="#deliver">
-            Select
-        <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
+        <div class="pick-backdrop" ng-click="imageFunc(image.src)">
+                <!--<input type="button" id="speechButton" value="Select" class="btn btn-info">-->
+        </div>
         </a>
-        </button>
-        <img id= "prev" class="img-responsive" ng-src="assets/styles/images/left-arrow.png" ng-click="prev()"/>
-        <img id="next" class="img-responsive" ng-src="assets/styles/images/right-arrow.png" ng-click="next()" />
+        <!--<img id= "prev" class="img-responsive" ng-src="assets/styles/images/left-arrow.png" ng-click="prev()"/>-->
+        <!--<img id="next" class="img-responsive" ng-src="assets/styles/images/right-arrow.png" ng-click="next()" />-->
     </div>
             <!--<div class="arrows">-->
                 <!--<img id= "prev" class="img-responsive" ng-src="assets/styles/images/left-arrow.png" ng-click="prev()"/>-->

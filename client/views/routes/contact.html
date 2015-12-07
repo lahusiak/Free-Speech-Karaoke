@@ -1,26 +1,32 @@
-<!--<div ng-app="myApp" ng-controller="contact">-->
+<div ng-app="myApp" ng-controller="contact">
 <div ng-include="'/assets/views/templates/header.html'"></div>
 <div ng-include="'/assets/views/templates/nav.html'"></div>
 
-<div id="contact" class="col-md-8 col-md-offset-2 text-center">
-<h1>Contact</h1>
+<div id="contact" class="col-md-8 col-md-offset-2">
+    <h1>Let's stay in touch!</h1>
 
-<h2>Please join our mailing list</h2>
-
-
+    <form class="col-md-8 col-md-offset-2">
     <div class = "form-group">
-        <label for="firstName">First Name: </label>
-        <input type="text" id="firstName" ng-model="user.firstname" placeholder="Enter First Name: "><br>
-        <label for="lastName">Last Name: </label>
-        <input type="text" id="lastName" ng-model="user.lastname"><br>
-        <label for="email">Email :</label>
-        <input type="text" id="email" ng-model="user.email"><br>
-        <br><br>
-        <div class="form-group">
-            <textarea ng-model="user.message" id="newMessage" name="newmessage" cols="60" rows="5" placeholder="Enter your message..."></textarea>
-        </div>
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" id="focusedInput" ng-model="user.firstname" placeholder="Ex. Jane "><br>
     </div>
-        <button ng-click="clickButton(user)" id="submit" class="btn btn-info">Submit</button>
+    <div class = "form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" ng-model="user.lastname" placeholder="Ex. Doe "><br>
+    </div>
+    <div class = "form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" ng-model="user.email" placeholder="email@email.com ">
+    </div>
+    <div class="form-group">
+        <label for="newMessage">Send us a note!</label>
+        <textarea ng-model="user.message" class="form-control" id="newMessage" name="newmessage" cols="60" rows="5" placeholder="We'd love to know what you think...">
+            </textarea>
+    </div>
+    <div class="form-group">
+        <button ng-click="clickButton(user)" id="submit" class="btn btn-info">
+            Submit</button>
+    </div>
     </form>
 
 </div>

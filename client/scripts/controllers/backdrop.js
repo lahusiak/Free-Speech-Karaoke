@@ -2,38 +2,22 @@ myApp.controller('SliderController', ['$scope', 'DeliveryFactory', function($sco
     $scope.deliveryBackdrop={};
     //$scope.DeliveryFactory = DeliveryFactory;
     $scope.images= [{
-        src:'/assets/styles/images/nature-field-countryside-house.png',
+        src:'/assets/styles/images/sunset.png',
         title:'Nature Backdrop'
     }, {
-        src: '/assets/styles/images/usa-stock-ny-new-york.png',
+        src: '/assets/styles/images/stockexchange.png',
         title: 'Flag Backdrop'
     }, {
-        src: '/assets/styles/images/sky-field-agriculture-harvest.png',
+        src: '/assets/styles/images/harvest.png',
         title: 'Field Backdrop'
     },{
-        src: '/assets/styles/images/usa-station-metro-subway.png',
+        src: '/assets/styles/images/subway.png',
         title: 'Subway Fair'
     },{
-        src: '/assets/styles/images/Life-of-Pix-free-stock-photos-sunset-sea-light-mikewilson.png',
-        title: 'Sunset Backdrop'
+        src: '/assets/styles/images/firework.png',
+        title: 'Firework Backdrop'
     }];
 
-    //$scope.imageValue = DeliveryFactory.addImage();
-
-    console.log("YES");
-    $scope.test = function(){
-        console.log("Yupper do");
-    };
-
-    //$scope.imageFunc = function(newValue){
-    //    console.log("I'm imageFunc");
-    //    $scope.imageValue.image = newValue;
-    //    DeliveryFactory.addImage(newValue);
-    //};
-    //$scope.selectBackdrop = function(image){
-    //    $scope.deliveryBackdrop = image;
-    //    console.log($scope.deliveryBackdrop);
-    //};
 }]);
 
 myApp.directive('slider', ['$timeout', 'DeliveryFactory', function($timeout, DeliveryFactory){
@@ -73,18 +57,7 @@ myApp.directive('slider', ['$timeout', 'DeliveryFactory', function($timeout, Del
                 },5000);
             };
 
-            //scope.imageFunc = function(image){
-            //    DeliveryFactory.getImage();
-            //};
-            //scope.DeliveryFactory = DeliveryFactory;
-            //scope.selectBackdrop = function(image){
-            //    scope.deliveryBackdrop = image;
-            //    console.log(scope.deliveryBackdrop);
-
-
-            //};
-
-            sliderFunc();
+            //sliderFunc();
 
             scope.imageValue = DeliveryFactory.addImage();
 
@@ -97,9 +70,10 @@ myApp.directive('slider', ['$timeout', 'DeliveryFactory', function($timeout, Del
             scope.$on('$destroy',function(){
                 $timeout.cancel(timer);
             });
-
+            sliderFunc();
             /* End : For Automatic slideshow*/
         },
+
         templateUrl: '/assets/views/templates/slideshow.html'
 
     };

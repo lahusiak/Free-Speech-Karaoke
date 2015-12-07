@@ -1,29 +1,49 @@
 <div class="container col-sm-12 text-center" id="deliver" >
     <div id="fb-root"></div>
+    <div ng-show="IsVisible" class="row">
+        <div class="deliver col-md-8 col-md-offset-2 text-center">
+            <ul class="nav nav-pills nav-justified">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#library">LIBRARY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="/logout">LOGOUT</a></li>
+            </ul>
 
+        </div>
+
+    </div>
     <h1 ng-show="!IsVisible">Are you ready?</h1>
         <!--<button ng-show="!IsVisible" class="btn btn-lg text-center" ng-click="IsVisible=!IsVisible">KARAOKE</button>-->
     <button class="give-speech" ng-show="!IsVisible" ng-click="IsVisible=!IsVisible">
         <!--<img ng-show="!IsVisible" ng-click="IsVisible=!IsVisible" class="img-responsive" src="/assets/styles/images/giveSpeech.png"/>-->
     </button>
 
-    <div ng-show="IsVisible">
+    <div class= "scroll-up" ng-show="IsVisible">
         <img ng-src="{{karaokeObject.image}}"/>
 
-            <h2>{{karaokeObject.speechText}}</h2>
+            <h1>{{karaokeObject.speechText}}</h1>
 
             <br>
             <br>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
 
-            <div class="nav-buttons">
-                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>
-                <a href="#library" class="btn btn-lg">Start Over</a>
-                <a href="#contact" class="btn btn-lg">Mailing List</a>
-                <a href="/logout" class="btn btn-primary">
-                    <span class=""></span>Logout</a>
-            </div>
+        <!--<div class="row">-->
+                    <!--<div class="deliver col-md-8 col-md-offset-2 text-center">-->
+                        <!--<ul class="nav nav-pills nav-justified">-->
+                            <!--<li><a href="#home">HOME</a></li>-->
+                            <!--<li><a href="#about">ABOUT</a></li>-->
+                            <!--<li><a href="#library">LIBRARY</a></li>-->
+                            <!--<li><a href="#contact">CONTACT</a></li>-->
+                            <!--<li><a href="/logout">LOGOUT</a></li>-->
+                        <!--</ul>-->
+                           <!-- -->
+                <!--</div>-->
 
-        </div>
+            <!--</div>-->
+
+</div>
+
 </div>
 
 <!--<div ng-if="bool" class="fade" ng-show="IsVisible">-->
