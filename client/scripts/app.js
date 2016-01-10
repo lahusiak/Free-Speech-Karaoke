@@ -3,14 +3,6 @@
  */
 var myApp = angular.module("myApp", ['ngRoute', 'ui.grid', 'ngAnimate']);
 
-//FACEBOOK PLUGINS
-window.fbAsyncInit = function() {
-    FB.init({
-        appId      : '796300190497596',
-        xfbml      : true,
-        version    : 'v2.5'
-    });
-};
 
 (function(d, s, id){
     var js, fjs = d.getElementsByTagName(s)[0];
