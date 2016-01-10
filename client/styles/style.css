@@ -58,12 +58,26 @@ body {
     box-shadow: 0 0 32px rgb(255, 53, 86);
     border: 3px solid rgb(255, 53, 86);
 }
+
+#icons {
+    margin: auto;
+    /* margin-left: 50px; */
+    width: 100%;
+    /* display: inline-block; */
+    text-align: center;
+}
+
 #icons img {
-    display: inline;
+    position: relative;
+    display: inline-block;
     padding: 5px;
     border: solid 3px #fafafa;
     border-radius: 7px;
-    margin: 8px;
+    /*margin: 8px;*/
+    margin: auto;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+
     box-shadow: 0 0 32px rgb(255, 53, 86);
     border: 3px solid rgb(255, 53, 86);
 }
@@ -239,11 +253,6 @@ body {
     background-color: black;
 }
 
-/*.slide img {*/
-    /*height: 500px;*/
-    /*width: 600px;*/
-    /*webkit-filter:contrast(3);*/
-/*}*/
 
 .featured {
     width: 600px;
