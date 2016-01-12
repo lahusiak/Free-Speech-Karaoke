@@ -10,9 +10,6 @@ var index = require('./routes/index.js');
 var speeches = require('./routes/speeches');
 var mailinglist = require('./routes/mailinglist');
 
-//var cloudinary = require('cloudinary');
-
-
 //Mount body parser middleware
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
