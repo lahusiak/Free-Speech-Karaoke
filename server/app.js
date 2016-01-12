@@ -15,6 +15,8 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({expanded: true}));
 
+app.use(express.static(__dirname + '/public'));
+
 // mount router middleware
 app.use('/speeches', speeches);
 
