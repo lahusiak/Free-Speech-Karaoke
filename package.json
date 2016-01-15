@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/app.js",
-    "postinstall": "grunt"
+    "postinstall": "grunt",
+    "start": "node server/app.js"
+
   },
   "author": "Laryssa Husiak",
   "license": "ISC",
