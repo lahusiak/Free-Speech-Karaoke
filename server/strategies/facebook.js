@@ -28,7 +28,7 @@ passport.use(new FacebookStrategy({
          //pull in our app id and secret from our facebook.js file
         clientID        : process.env.FB_CLIENT_ID, // your App ID,
         clientSecret    : process.env.FB_SECRET, // your App Secret,
-        callbackURL     : 'http://localhost:5000/auth/facebook/callback'
+        callbackURL     : 'https://freespeechkaraoke.herokuapp.com/auth/facebook/callback'
 
     },
 

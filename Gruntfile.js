@@ -80,7 +80,6 @@ module.exports = function(grunt){
                 expand: true,
                 cwd: "client/styles/images",
                 src: "*.png",
-
                 dest: "server/public/assets/styles/images"
             }
         }
