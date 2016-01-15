@@ -79,8 +79,14 @@ module.exports = function(grunt){
             images: {
                 expand: true,
                 cwd: "client/styles/images",
-                src: "*.png",
+                src: "*",
                 dest: "server/public/assets/styles/images"
+            },
+            icons: {
+                expand: true,
+                cwd: "node_modules/bootstrap/fonts",
+                src:"*",
+                dest: "server/public/vendors/fonts"
             }
         }
     });
