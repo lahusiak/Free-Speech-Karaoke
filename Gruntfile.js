@@ -79,7 +79,7 @@ module.exports = function(grunt){
             images: {
                 expand: true,
                 cwd: "client/styles/images",
-                src: "*",
+                src: "*.png",
                 dest: "server/public/assets/styles/images"
             },
             icons: {
