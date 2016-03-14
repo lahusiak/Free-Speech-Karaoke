@@ -4,9 +4,9 @@ var express = require('express');
 var app = express();
 
 //uncomment when running locally
- var passport = require('./strategies/authorization');
+ // var passport = require('./strategies/authorization');
 //uncomment when running on herokuapp
- // var passport = require('./strategies/facebook');
+  var passport = require('./strategies/facebook');
 var session = require('express-session');
 
 var index = require('./routes/index.js');
