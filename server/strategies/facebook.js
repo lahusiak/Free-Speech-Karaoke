@@ -2,8 +2,8 @@ var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
 //uncomment when running locally
- var FB_CLIENT_ID = ""
- var FB_SECRET = ""
+ // var FB_CLIENT_ID = ""
+ // var FB_SECRET = ""
 
 // load up the user model
 //var User       = require('../app/models/user');
@@ -34,8 +34,8 @@ passport.deserializeUser(function(id, done) {
 passport.use(new FacebookStrategy({
 
          //pull in our app id and secret from our facebook.js file
-        clientID: FB_CLIENT_ID, // your App ID,
-        clientSecret: FB_SECRET, // your App Secret,
+        clientID: process.env.FB_CLIENT_ID, // your App ID,
+        clientSecret: process.env.FB_SECRET, // your App Secret,
         callbackURL: 'https://freespeechkaraoke.herokuapp.com/auth/facebook/callback'
 
     },
