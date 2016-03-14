@@ -1,6 +1,7 @@
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
+//uncomment when running locally
  var FB_CLIENT_ID = ""
  var FB_SECRET = ""
 
