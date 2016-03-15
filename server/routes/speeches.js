@@ -9,7 +9,7 @@ var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/sp
 // Returns the entire list of speeches
 //Added /speeches instead of "/"
 //Attempting to fix crash on herokuapp
-router.get("/speeches", function(req, res) {
+router.get("/", function(req, res) {
     var results = [];
 
     pg.connect(connectionString, function (err, client, done) {
