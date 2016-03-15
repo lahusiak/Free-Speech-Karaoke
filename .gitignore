@@ -4,3 +4,4 @@ npm-debug.log
 .DS_STORE/
 /server/strategies/authorization.js
 build/*.js
+node_modules
