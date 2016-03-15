@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var pg = require('pg');
- // pg.default.ssl = true;
+  pg.defaults.ssl = true;
 
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/speech_library';
 
