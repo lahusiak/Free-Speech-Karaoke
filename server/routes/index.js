@@ -3,7 +3,7 @@ var router = express.Router();
 var path = require('path');
 
 var passport = require('passport');
-require('../strategy/facebook')('passport');
+require('../strategies/facebook')('passport');
 // var passport = require('../strategies/facebook');
 
 //FACEBOOK ROUTES===============
