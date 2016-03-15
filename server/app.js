@@ -24,7 +24,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({expanded: true}));
 
-app.use(express.static(__dirname + 'server/public'));
+app.use(express.static(__dirname + '/public'));
 
 // mount router middleware
 app.use('/speeches', speeches);
@@ -45,7 +45,7 @@ app.use(passport.session());
 
 //added in public instead of '/'
 //not sure that's solving the crash on herokuapp
-app.use('/public', index);
+app.use('/', index);
 
 // set node to listen on a port
 app.set("port", (process.env.PORT || 5000));
