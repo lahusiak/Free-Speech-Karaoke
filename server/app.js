@@ -37,7 +37,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/', index);
+app.use('/public', index);
 
 // set node to listen on a port
 app.set("port", (process.env.PORT || 5000));
