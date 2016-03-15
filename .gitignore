@@ -1,5 +1,6 @@
 node_modules/
 .idea/
+npm-debug.log
 .DS_STORE/
 /server/strategies/authorization.js
 build/*.js

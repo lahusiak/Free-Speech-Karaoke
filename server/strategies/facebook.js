@@ -1,3 +1,5 @@
+
+module.exports = function(){
 var passport = require('passport');
 var FacebookStrategy = require('passport-facebook').Strategy;
 
@@ -82,5 +84,6 @@ passport.use(new FacebookStrategy({
 //    });
 //
 //}));
+};
 
-module.exports = passport;
+// module.exports = passport;
