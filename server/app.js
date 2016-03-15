@@ -6,7 +6,7 @@ var app = express();
 //uncomment when running locally
  // var passport = require('./strategies/authorization');
 //uncomment when running on herokuapp
-  var passport = require('./strategies/facebook');
+var passport = require('./strategies/facebook');
 var session = require('express-session');
 
 var index = require('./routes/index.js');
@@ -37,7 +37,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use('/public', index);
+//added in public instead of '/'
+//not sure that's solving the crash on herokuapp
+app.use('/', index);
 
 // set node to listen on a port
 app.set("port", (process.env.PORT || 5000));
