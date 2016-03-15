@@ -13,8 +13,8 @@ var session = require('express-session');
 var morgan = require('morgan');
 
 var index = require('./routes/index.js');
-var speeches = require('./routes/speeches');
-var mailinglist = require('./routes/mailinglist');
+var speeches = require('./routes/speeches.js');
+var mailinglist = require('./routes/mailinglist.js');
 
 //debug
 app.use(morgan('dev'));
