@@ -13,11 +13,13 @@ router.get("/", function(req, res) {
     var results = [];
 
     pg.connect(connectionString, function (err, client, done) {
-        var query = client.query("SELECT speaker, title, theme, text, era, year FROM speeches ORDER BY speaker ASC");
+
         // Handle Errors
         if (err){
             console.log(err);
         };
+        //define query
+        var query = client.query("SELECT speaker, title, theme, text, era, year FROM speeches ORDER BY speaker ASC");
         // Stream results back one row at a time
         query.on('row', function (row) {
             results.push(row);
