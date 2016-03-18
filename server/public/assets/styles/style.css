@@ -30,12 +30,13 @@ body {
 .nav a {
     color: black;
     font-weight: 300;
+    border: 1px solid #ffc508;
 }
 
 .nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
     color: white;
-    font-weight: bolder;
+    font-weight: 300;
     background-color: black;
     border: 1px solid rgb(255, 53, 86);
     box-shadow: 0 0 32px rgb(255, 53, 86);
@@ -620,4 +621,3 @@ body {
 #about {
     font-size: 18px;
 }
-
